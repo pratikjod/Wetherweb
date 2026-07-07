@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="<%= weather.temp < 6 ? 'temp-ice' : weather.temp >= 6 && weather.temp < 18 ? 'temp-cold' : weather.temp >= 18 && weather.temp < 29 ? 'temp-mild' : 'temp-hot' %>">
+        
+        
+    <h1>WEATHER Report</h1>
+    
+    <table border="6" cellpadding="20">
+        <tr>
+            <th>Weather-ID</th>
+            <td><%=weather.weather_id %></td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td><%=weather.country%></td>
+        </tr>
+
+        <tr>
+            <th>State</th>
+            <td><%=weather.state %></td>
+        </tr>
+
+        <tr>
+            <th>City</th>
+            <td><%=weather.city %></td>
+        </tr>
+
+        <tr>
+            <th>Latitude</th>
+            <td><%=weather.lat %></td>
+        </tr>
+
+        <tr>
+            <th>Longitude</th>
+            <td><%=weather.lon %></td>
+        </tr>
+        
+        <tr>
+            <th>Current Temperature</th>
+            <td><%=weather.temp %>&deg;C</td>
+        </tr>
+
+        <tr>
+            <th>Feels Like Temperature</th>
+            <td><%=weather.feels_like %>&deg;C</td>
+        </tr>
+
+        <tr>
+            <th>Minimum Temperature</th>
+            <td><%=weather.temp_min %>&deg;C</td>
+        </tr>
+
+        <tr>
+            <th>Maximum Temperature</th>
+            <td><%=weather.temp_max %>&deg;C</td>
+        </tr>
+
+        <tr>
+            <th>Weather Description</th>
+            <td><%=weather.description %></td>
+        </tr>
+
+        <tr>
+            <th>Humidity</th>
+            <td><%=weather.humidity %>%</td>
+        </tr>
+
+        <tr>
+            <th>Pressure</th>
+            <td><%=weather.pressure %>Pa</td>
+        </tr>
+    </table>
+    <h2><a href="/home">Back To Home Page</a></h2>
+</body>
+</html> 
