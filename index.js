@@ -5,7 +5,7 @@ const axios = require("axios");
 const SERVER = express();
 const PORT = process.env.PORT || 2015;
 
-const API_KEY = "2de127ea0ce130f232c365dea34d9876";
+const API_KEY = process.env.API_KEY;
 
 SERVER.use(express.static(path.join(__dirname, "public")));
 
